@@ -6,7 +6,6 @@ function makeItBig(){
     for(var i = 0; i < arr.length; i++){
         if(arr[i] > 0){
             arr[i] = "big";
-
         }
     } return arr;
 }
@@ -24,9 +23,7 @@ function lowHigh(){
             max = arr[i];
         }if (arr[i]< arr.length){
             min = arr[i];
-           
         }
-     
     }
     console.log(min);
     return max;
@@ -43,7 +40,6 @@ function printReturn(arr){
     for(var i = 0; i < arr.length; i++){
         if(arr[i] % 2 == 1){
             odd = arr[i];
-
             console.log(last);            
             return odd;
         }
@@ -73,9 +69,7 @@ function countPositive(){
     for(var i = 0; i < arr.length; i++){
         if(arr[i]>0){
             count++;
-           
         }if (i == arr.length-1){
-
             arr[arr.length-1] = count;
         }
     }       
@@ -87,9 +81,7 @@ countPositive();
 
 function evenOdds(){
     var arr = [1,1,1,2,2,2,1,1,1,3,4];
-
     for(var i = 0; i < arr.length-2; i++){
-           
         if(arr[i] % 2 ==0 && arr[i+1] %2 ==0 && arr[i+2] % 2 ==0){ 
             console.log("Even more so!");
         }
@@ -147,13 +139,11 @@ previousLength();
 
     function reverseArray(){
 
-        var arr = [3,1,6,4,2];
-        
+        var arr = [3,1,6,4,2]; 
         for(var i = 0, x = arr.length -1; i <x; i++, x--) {
             var temp = arr[i];
             arr[i] = arr[x];
             arr[x] = temp;
-
           }
         return arr;
     }
@@ -172,7 +162,6 @@ previousLength();
             if(arr[i]>0){
                 newarr.push(arr[i]*=-1);
             }
-           
         } return newarr;
     }
     outlookNegative();
@@ -215,7 +204,6 @@ previousLength();
         for(var i =0; i <arr.length; i++){
             arr[i]*= num;
         }
-        
         return arr;
     }
     scaleArray([5,7,3,2], 4);

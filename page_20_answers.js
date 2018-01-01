@@ -16,7 +16,6 @@ function printRtn(){
         
         var arr = [2,8];
         console.log(arr[0]);
-
         return arr[1];
 }
 printRtn();
@@ -26,7 +25,6 @@ printRtn();
 function firstPlus(){
 
         var arr = [false,2,4,6];
-
         return arr[0] += arr.length;
 }
 firstPlus();
@@ -73,7 +71,6 @@ function lengthValue(num1,num2){
             var arr = [];
             for(var i = 0; i < num1; i++){
                 arr.push(num2)
-
             }
         } 
         console.log (arr);
@@ -84,14 +81,12 @@ lengthValue();
 
 function fitFirst(){
 
-    var arr = [];
-        
-        if(arr[0] > arr.lenght){
+    var arr = [];      
+    if(arr[0] > arr.lenght){
             console.log("Too Big!");
     }else{
         if(arr[0]< arr.length){
             console.log("Too small!");
-
     }else{
         if(arr[0]== arr.length){
             console.log("Just right!");
@@ -104,7 +99,7 @@ fitFirst();
 //Page 20 - Question 8 - Fahrenheit to Celsius
 
 function fahrenheitToCelsius(fDegrees){
-
+    
     return (fDegrees-32) *5/9
 }
 fahrenheitToCelsius(85);
