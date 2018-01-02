@@ -11,18 +11,21 @@ function countDown(arrnum){
         console.log(arr);
         return arr;
       } 
-countDown();
+countDown(10);
 
 /*Question 2 - Print and Return
 Your function will receive an array with two numbers. Print the first value, and return the second.
 */
-function printRtn(){
+function printRtn(arrone,arrtwo){
         
-        var arr = [2,8];
-        console.log(arr[0]);
-        return arr[1];
+        var arr = [];
+        arr[0] = arrone;
+        arr[1] = arrtwo;
+        console.log(arrone);
+        return arrtwo;
+    
 }
-printRtn();
+printRtn(2,9);
 
 /*Question 3 - First Plus Length
 Given an array, return the sum of the first value in the array, plus the array’s length. What happens if
@@ -30,7 +33,7 @@ the array’s first value is not a number, but a string (like "what?") or a bool
 */
 function firstPlus(){
 
-        var arr = [false,2,4,6];
+        var arr = ["what? ",2,4,6];
         return arr[0] += arr.length;
 }
 firstPlus();
@@ -56,19 +59,17 @@ valuesGreat();
 Write a function that accepts any array, and returns a new array with the array values that are greater
 than its 2nd value. Print how many values this is. What will you do if the array is only one element long?
 */
-function valueGeneral(arr){
-
+function valueGeneral(inputArr){
+       
         var arr = [];
-        var count = 0;
-        for(var i = 0; i < arr.length; i++){
-            if(arr[i]>arr[1]){
-                count++;
-                console.log(arr[i]);
-            }
+        var newarr = []
+        for(var i = inputArr; i>0; i++){
+            arr.push(i);
+    
         }
-        return count;
+        return newarr;
     }
-valueGeneral();
+valueGeneral(4);
 
 /*Question 6 - This Length, That Voice
 Given two numbers, return array of length num1 with each value num2. Print "Jinx!" if they are same.

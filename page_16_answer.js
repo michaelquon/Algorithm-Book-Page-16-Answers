@@ -103,7 +103,7 @@ function leapYear(year){
             console.log("it is not a Leap Year");
         }
     }
-leapYear(2016);
+leapYear(2018);
 
 /*Question 8 - Print and Count
 Print all integer multiples of 5, from 512 to 4096.
@@ -194,19 +194,19 @@ function countDown(){
 }
 countDown();
 
-/*Question 14 - Flesumible Countdown
+/*Question 14 - Flexible Countdown
 Based on earlier “Countdown by Fours”, given
 lowNum, highNum, mult, print multiples of mult
 from highNum down to lowNum, using a FOR.
 For (2,9,3), print 9 6 3 (on successive lines).
 */
-function flesumibleCount(lowNum, highNum, mult){
+function flexibleCount(lowNum, highNum, mult){
 
     for(var i=highNum; i > lowNum; i-=mult){
         console.log(i);
     }
-}
- flesumibleCount();
+   }
+    flexibleCount(2,9,3);
 
  /*Question 15 - The Final Countdown
  This is based on “Flexible Countdown”. The parameter names are not as helpful, but the problem is
@@ -215,15 +215,15 @@ print the multiples of param1, starting at param2 and extending to param3. One e
 multiple is equal to param4, then skip (don’t print) it. Do this using a WHILE. Given (3,5,17,9), print
 6,12,15 (which are all of the multiples of 3 between 5 and 17, and excluding the value 9).
 */
- function finalCount(param1, param2, param3, param4){
+function finalCount(param1, param2, param3, param4){
 
     while(param2 < param3){
         if(param2 % param4 !=0){
-        if(param2 % param1 ===0){
-            console.log(param2);
+            if(param2 % param1 ===0){
+                console.log(param2);
             }
         }
         param2++;
     }
  }
- finalCount();
+ finalCount(3,5,17,9);
