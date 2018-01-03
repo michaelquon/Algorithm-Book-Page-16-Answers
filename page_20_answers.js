@@ -59,17 +59,20 @@ valuesGreat();
 Write a function that accepts any array, and returns a new array with the array values that are greater
 than its 2nd value. Print how many values this is. What will you do if the array is only one element long?
 */
-function valueGeneral(inputArr){
-       
-        var arr = [];
-        var newarr = []
-        for(var i = inputArr; i>0; i++){
-            arr.push(i);
-    
+function valueGeneral(arr){
+
+    var newarr = [];
+    var count = 0;
+    for(var i=0; i<arr.length; i++){
+        if(arr[i]>arr[1]){
+            count++;
+            newarr.push(arr[i]);
         }
+    }
+        console.log(count);
         return newarr;
     }
-valueGeneral(4);
+valueGeneral([4,4,6,7,6,4]);
 
 /*Question 6 - This Length, That Voice
 Given two numbers, return array of length num1 with each value num2. Print "Jinx!" if they are same.
@@ -86,15 +89,14 @@ function lengthValue(num1,num2){
         } 
         console.log (arr);
 }
-lengthValue();
+lengthValue(4,4);
 
 /*Question 7 - Fit the First Value
 Your function should accept an array. If value at [0] is greater than array’s length, print "Too big!";
 if value at [0] is less than array’s length, print "Too small!"; otherwise print "Just right!".
 */
-function fitFirst(){
-
-    var arr = [];      
+function fitFirst(arr){
+     
     if(arr[0] > arr.lenght){
             console.log("Too Big!");
     }else{
@@ -107,7 +109,7 @@ function fitFirst(){
          }
      }
 }
-fitFirst();
+fitFirst([0,3,3]);
 
 /*Question 8 - Fahrenheit to Celsius
 Kelvin wants to convert between temperature scales. Create fahrenheitToCelsius(fDegrees)
@@ -131,4 +133,4 @@ function celsiusToFahrenheit(cDegrees){
 
     return (cDegrees *9/5) + 32
 }
-celsiusToFahrenheit(30);
+celsiusToFahrenheit(29.44);
