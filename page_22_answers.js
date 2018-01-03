@@ -4,25 +4,23 @@ positive numbers in the array to “big”. Example:
 makeItBig([-1,3,5,-5]) returns that same
 array, changed to [-1,"big","big",-5].
 */
-function makeItBig(){
+function makeItBig(arr){
 
-    var arr = [-1,3,5,-5];
     for(var i = 0; i < arr.length; i++){
         if(arr[i] > 0){
             arr[i] = "big";
         }
     } return arr;
 }
-makeItBig();
+makeItBig([-1,3,5,-5]); //input array
 
 /*Question 2 - Print Low, Return High
 Create a function that takes array of numbers.
 The function should print the lowest value in the
 array, and return the highest value in the array.
 */
-function lowHigh(){
+function lowHigh(arr){
 
-    var arr = [];
     var max = 0;
     var min = 0;
     for(var i = 0; i < arr.length; i++){
@@ -35,7 +33,7 @@ function lowHigh(){
     console.log(min);
     return max;
 }   
-lowHigh();
+lowHigh([4,6,7,10,3,7,1]); //input array
 
 /*Question 3 - Print One, Return Another
 Build a function that takes array of numbers. The
@@ -44,7 +42,6 @@ array, and return first odd value in the array.
 */
 function printReturn(arr){
 
-    var arr = [];
     var odd = 0;
     var last = arr[arr.length -2];
     for(var i = 0; i < arr.length; i++){
@@ -55,7 +52,7 @@ function printReturn(arr){
         }
     }
 }
-printReturn();
+printReturn([3,6,1,8,9]); //input array
 
 /*Question 4 - Double Vision
 Given array, create a function to return a new
@@ -63,16 +60,15 @@ array where each value in the original has been
 doubled. Calling double([1,2,3]) should
 return [2,4,6] without changing original.
 */
-function double(){
+function double(arr){
 
-    var arr = [1,2,3];
     var newarr = [];
     for(var i = 0; i < arr.length; i++){
-        newarr.push(arr[i]+arr[i]);
+        newarr.push(arr[i]*2);
     }
     return newarr; 
 }
-double();
+double([1,2,3]); //input array
 
 /*Question 5 - Count Positives
 Given array of numbers, create function to
@@ -80,9 +76,8 @@ replace last value with number of positive values.
 Example, countPositives([-1,1,1,1])
 changes array to [-1,1,1,3] and returns it.
 */
-function countPositive(){
+function countPositive(arr){
 
-    var arr = [];
     var count = 0;
     for(var i = 0; i < arr.length; i++){
         if(arr[i]>0){
@@ -90,10 +85,11 @@ function countPositive(){
         }if (i == arr.length-1){
             arr[arr.length-1] = count;
         }
-    }       
+    }
+    console.log("Number of positive values =",count);       
     return arr;
 }
-countPositive();
+countPositive([-1,1,1,1]);
 
 /*Question 6 - Evens and Odds *Needed Help with this one*
 Create a function that accepts an array. Every
@@ -101,8 +97,8 @@ time that array has three odd values in a row,
 print "That’s odd!" Every time the array has
 three evens in a row, print "Even more so!"
 */
-function evenOdds(){
-    var arr = [1,1,1,2,2,2,1,1,1,3,4];
+function evenOdds(arr){
+
     for(var i = 0; i < arr.length-2; i++){
         if(arr[i] % 2 ==0 && arr[i+1] %2 ==0 && arr[i+2] % 2 ==0){ 
             console.log("Even more so!");
@@ -112,15 +108,14 @@ function evenOdds(){
         }
     }  
 }       
-evenOdds();
+evenOdds([1,1,1,2,2,2,1,1,1,3,4]);
 
 /*Question 7 - Increment the Seconds
 Given arr, add 1 to odd elements ([1], [3],
 etc.), console.log all values and return arr.
 */
-function incrementTheSeconds(){
+function incrementTheSeconds(arr){
 
-    var arr = [2,5,4,7,6,9];
     var odd = 1;
     for(var i =0; i <arr.length; i++){
             console.log(i);
@@ -130,7 +125,7 @@ function incrementTheSeconds(){
     } 
     return arr;
 }
-incrementTheSeconds();
+incrementTheSeconds([2,5,4,7,6,9]);
 
 /*Question 8 - Previous Lengths
 You are passed an array containing strings.
@@ -138,24 +133,22 @@ Working within that same array, replace each
 string with a number – the length of the string at
 previous array index – and return the array.
 */
-function previousLength(){
+function previousLength(arr){
 
-    var arr = ["apple","tree","leaves"];
     for(var i = 0; i < arr.length; i++){
-        arr[i] = 1;
+        arr[i] = arr[i].length;
     }
     return arr;
 }
-previousLength();
+previousLength(["apple","tree","leaves"]);
 
 /*Question 9 - Add Seven to Most
 Build function that accepts array. Return a new
 array with all values except first, adding 7 to
 each. Do not alter the original array.
 */
-    function sevenToMost(){
+    function sevenToMost(arr){
 
-        var arr = [1,3,2,5,6];
         var newarr = [];
         for(var i=0;i<arr.length;i++){
             newarr.push(arr[i]+7);
@@ -163,7 +156,7 @@ each. Do not alter the original array.
         newarr.shift();
         return newarr;
     }
-    sevenToMost();
+    sevenToMost([1,3,2,5,6]);
 
     /*Question 10 - Reverse Array
     Given array, write a function to reverse values,
@@ -231,6 +224,7 @@ each. Do not alter the original array.
     Change [1,2,3,4,5,6] to [6,2,4,3,5,1].
     */
     function swapCenter(arr) {
+
         for(var i = 0; i < Math.floor(arr.length/2); i++) {
         if (i % 2 == 0) {
         temp = arr[i];
